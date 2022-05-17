@@ -1,0 +1,168 @@
+.farmer-market-page{
+    .banner-wrap{
+        width: 100%;
+        position: relative;
+
+        .max-width-wrap {
+            position: relative;
+            display: block;
+            width: 100%;
+            z-index: 2;
+            background-color: rgba( 131,139,139 , 0.25);
+        }
+        .banner-content {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            overflow: hidden;
+            h2{
+                font-family: $hind;
+                letter-spacing: 1.8;
+                font-size: 2.6rem;
+                line-height: 1.6;
+                font-weight: 700;
+                color: #333;
+            }
+            p{
+                font-family: $hind;
+                font-size: 26px;
+                font-weight: 500;
+                line-height: 40px;
+                color: #fff;
+            }
+        }
+    }
+    .header-text {
+        font-family: $hind;
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 1.2px;
+        color: rgb(0, 62, 81);
+        margin-bottom: 35px;
+    }
+    .event-intro {
+        padding-top: 90px;
+        padding-bottom: 40px;
+        position: relative;
+
+        .video-block{
+            width:100%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            // padding-left: 5rem;
+            video{
+                object-fit: cover;
+                width:100%;
+                height:100%;
+            }
+        }
+        .intro-block {
+            position: absolute;
+            left: 500px;
+            top: 60px;
+            width: auto;
+            padding: 50px 30px 50px 35px;
+            background-color: #0a6c5a;
+            color: #fff;
+            background-image: none;
+            box-shadow: none;
+            z-index: 4;
+
+            p{
+                font-family: $montserrat;
+                font-size: 1.6rem;
+                line-height: 38px;
+                font-weight: 700;
+            }
+        }
+
+    }
+    .event-text {
+        padding: 60px 0;
+    }
+
+    .search-bar {
+        background-color: #f7f2f3;
+        padding: 35px 0;
+
+        .search-box-form{
+
+            input {
+                display: block;
+                width: 100%;
+                height: 48px;
+                border: none;
+                color: #444;
+                padding: 12px;
+                line-height: inherit;
+                cursor: text;
+            }
+            input:focus {
+                outline: none;
+                border: 1px solid #ba8b33 !important;
+            }
+            button {
+                border: none !important;
+                padding: 10px 20px;
+                background-color: #333;
+                color: #fff;
+                vertical-align: middle;
+                transition: all 0.3s ease
+            }
+        }
+    }
+    .shops-grid {
+        padding: 40px 0;
+
+        .shop-wrap {
+            border-radius: 9px!important;
+        }
+    }
+
+    .grid-top-wrap{
+        padding: 36px 0;
+        // width: calc(100% - 160px - 33px);
+    }
+    .grid-item {
+        display: inline-block;
+        width: 100%;
+        .blog-tile {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tile {
+            position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+            }
+
+            .tile:nth-of-type(odd){
+                border-bottom: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+            .tile:nth-of-type(even){
+                border-bottom: 1px solid #fff;
+            }
+
+            .tile--two-third {
+                flex-basis: 66.66%;
+                max-width: 66.66%;
+            }
+            .tile--one-third{
+                flex-basis: 33.33%;
+                max-width: 33.33%;
+            }
+        }
+    }
+
+    .market-gallery {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}

@@ -1,0 +1,61 @@
+@include max-width-media-1023 {
+    .shopping-cart-page{
+        .is-desktop{
+            display: none!important;
+        }
+    }
+    .shopping-cart-page{
+        .is-mobile{
+            display: flex;
+        }
+    }
+}
+
+@include media-1024 {
+    .shopping-cart-page{
+        .is-desktop{
+            display: flex!important;
+        }
+    }
+    .shopping-cart-page{
+        .is-mobile{
+            display: none!important;
+        }
+    }
+}
+@include media-1200 {
+    .shopping-cart-page{
+        .is-desktop{
+            display: flex!important;
+        }
+    }
+    .shopping-cart-page{
+        .is-mobile{
+            display: none!important;
+        }
+    }
+}
+@include media-1440 {
+    .shopping-cart-page{
+        .is-desktop{
+            display: flex!important;
+        }
+    }
+    .shopping-cart-page{
+        .is-mobile{
+            display: none!important;
+        }
+    }
+}
+@include media-1600 {
+    .shopping-cart-page{
+        .is-desktop{
+            display: flex!important;
+        }
+    }
+    .shopping-cart-page{
+        .is-mobile{
+            display: none!important;
+        }
+    }
+}

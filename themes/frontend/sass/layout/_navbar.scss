@@ -1,0 +1,51 @@
+.user-avatar-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header-middle {
+    ul.primary-menu {
+        li.menu-item:hover {
+            ul.dropdown {
+                top: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 120%;
+        left: auto;
+        right: auto;
+        min-width: 170px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        z-index: 2;
+        opacity: 0;
+        box-shadow:0 0 10px rgb(0 0 0 / 28%);
+        visibility: hidden;
+        transition: all .2s ease-in-out 0s;
+
+        li {
+            position: relative;
+            display: block;
+            margin-bottom: 10px;
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                display: block;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                padding: 0 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@include media-576 {
+    .container {
+        max-width: 540px;
+    }
+}
+@include media-768 {
+    .container {
+        max-width: 720px;
+    }
+}
+@include media-992 {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@include media-1200 {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+@include media-1440 {
+    .container {
+        max-width: 1380px;
+    }
+}

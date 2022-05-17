@@ -1,0 +1,695 @@
+@include media-300 {
+  /* ---------- Hero slider ---------- */
+  .home_header {
+    .hero_slider {
+      .hero-slide {
+        height: 90vh;
+
+        .slide-image {
+          max-width: 220px;
+        }
+
+        .slide-content {
+          width: 80%;
+          .slide-text {
+            font-size: 20px;
+          }
+          .slide-title {
+            font-size: 24px;
+          }
+          h5.sale-text {
+            font-size: 1.2em;
+          }
+
+          .slide-btn {
+            font-size: 12px;
+            padding: 10px 22px;
+            margin-top: 13px;
+          }
+        }
+        .slide-content.text-left{
+          left: 15px;
+        }
+      }
+
+    }
+  }
+
+  .newsletter-block {
+    .subscribe-content {
+      .subscribe-block {
+        button.subscribe-btn {
+          font-size: 13px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include media-375 {
+
+  /* ---------- Hero slider ---------- */
+  .home_header {
+      .hero_slider {
+        .hero-slide {
+          height: 90vh;
+
+          .slide-image {
+            max-width: 200px;
+          }
+
+          .slide-content {
+            width: 50%;
+            .slide-text {
+              font-size: 16px;
+            }
+            .slide-title {
+              font-size: 22px;
+            }
+
+            h5.sale-text {
+              font-size: 1.2em;
+            }
+  
+            .slide-btn {
+              font-size: 12px;
+              padding: 10px 22px;
+              margin-top: 13px;
+            }
+          }
+          .slide-content.text-left{
+            left: 8%;
+          }
+        }
+
+      }
+  }
+
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+
+}
+@include media-480 {
+    
+    /* ---------- Hero slider ---------- */
+    .home_header {
+        .hero_slider {
+          .hero-slide {
+            height: 90vh;
+    
+            .slide-image {
+              max-width: 230px;
+            }
+
+            .slide-content {
+              width: 50%;
+              .slide-text {
+                font-size: 20px;
+              }
+              .slide-title {
+                font-size: 26px;
+              }
+    
+              .slide-btn {
+                font-size: 12px;
+                padding: 10px 22px;
+                margin-top: 13px;
+              }
+            }
+            .slide-content.text-left{
+              left: 8%;
+            }
+          }
+
+        }
+    }
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+     /* ------- Promotion Section ---------*/
+    .advertisement-section {
+          .promo-grid, .advertise-grid {
+            .promo-wrap, .advertise-wrap{
+              // Promo Block
+              li.promo-wrapper {
+                width: 50%;
+      
+                .banner-block {
+                 
+                  .contain-banner {
+      
+                    .promo-content{
+                      h4.promo-percent{
+                        font-size: 20px;
+                      }
+                      h2.promo-name {
+                        font-size: 28px;
+                      }
+                    }
+                  }
+      
+                }
+              }
+            }
+          }
+        }
+    /* ------- End Promotion Section ---------*/
+
+}
+@media (min-width: 481px) and (max-width: 600px) {
+    
+  // Header Right Block
+  .right-block.header-block{
+    ul.shop-element{
+        justify-content: center;
+    }
+  }
+    /* ---------- Hero slider ---------- */
+    .home_header {
+      .hero_slider {
+        .hero-slide {
+          height: 480px;
+  
+          .slide-image {
+            max-width: 280px;
+          }
+          .slide-content {
+            width: 50%;
+            .slide-text {
+              font-size: 20px;
+            }
+            .slide-title {
+              font-size: 26px;
+            }
+            h5.sale-text {
+              font-size: 1.2em;
+            }
+  
+            .slide-btn {
+              font-size: 12px;
+              padding: 10px 22px;
+              margin-top: 13px;
+            }
+          }
+          .slide-content.text-left{
+            left: 8%;
+          }
+        }
+
+      }
+
+    }
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+    /* ------- Promotion Section ---------*/
+    .advertisement-section {
+      .promo-grid, .advertise-wrap {
+        .promo-wrap, .advertise-wrap {
+          // Promo Block
+          li.promo-wrapper {
+            width: 50%;
+  
+            .banner-block {
+              
+              .contain-banner {
+  
+                .promo-content{
+                  h4.promo-percent{
+                    font-size: 20px;
+                  }
+                  h2.promo-name {
+                    font-size: 28px;
+                  }
+                }
+              }
+  
+            }
+          }
+        }
+      }
+    }
+    /* ------- End Promotion Section ---------*/
+
+}
+@include media-600 {
+    
+  // Header Right Block
+  .right-block.header-block{
+    ul.shop-element{
+        justify-content: center;
+    }
+  }
+      /* ---------- Hero slider ---------- */
+      .home_header {
+        .hero_slider {
+          .hero-slide {
+            height: 500px;
+    
+            .slide-image {
+              max-width: 280px;
+            }
+            .slide-content {
+              width: 50%;
+              .slide-text {
+                font-size: 20px;
+              }
+              .slide-title {
+                font-size: 26px;
+              }
+              h5.sale-text {
+                font-size: 1.2em;
+              }
+    
+              .slide-btn {
+                font-size: 13px;
+                padding: 14px 26px;
+                margin-top: 13px;
+              }
+            }
+            .slide-content.text-left{
+              left: 8%;
+            }
+          }
+
+        }
+  
+      }
+      /* ------- Service Section ---------*/
+      .service-section {
+        .service-content {
+          .service-text {
+            p {
+              display: none;
+            }
+          }
+        }
+      }
+     /* -------  End Service Section ---------*/
+      /* ------- Promotion Section ---------*/
+     .advertisement-section {
+        .promo-grid, .advertise-grid {
+          .promo-wrap, .advertise-wrap {
+            // Promo Block
+            li.promo-wrapper {
+              width: 50%;
+    
+              .banner-block {
+               
+                .contain-banner {
+    
+                  .promo-content{
+                    h4.promo-percent{
+                      font-size: 20px;
+                    }
+                    h2.promo-name {
+                      font-size: 28px;
+                    }
+                  }
+                }
+    
+              }
+            }
+          }
+        }
+      }
+      /* ------- End Promotion Section ---------*/
+
+}
+@media (min-width: 601px) and (max-width: 991.98px) {
+    
+  // Header Right Block
+  .right-block.header-block{
+    ul.shop-element{
+        justify-content: center;
+    }
+  }
+  .main-header {
+    .column_wrap{
+      display: none;
+    }
+  }
+  .home_header {
+    .hero_slider {
+      .hero-slide {
+        height: 500px;
+
+        .slide-image {
+          max-width: 340px;
+        }
+
+        .slide-content {
+          width: 50%;
+          .slide-text {
+            font-size: 24px;
+          }
+          .slide-title {
+            font-size: 36px;
+          }
+          .sale-text {
+            font-size: 1.2em;
+          }
+          .slide-btn {
+            font-size: 14px;
+            padding: 14px 26px;
+            margin-top: 13px;
+          }
+        }
+        .slide-content.text-left{
+          left: 8%;
+        }
+      }
+
+    }
+  }
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+
+  /* ------- Promotion Section ---------*/
+  .advertisement-section {
+    .promo-grid, .advertise-grid {
+      .promo-wrap, .advertise-wrap {
+        // Promo Block
+        li.promo-wrapper {
+          width: 50%;
+
+          .banner-block {
+         
+            .contain-banner {
+
+              .promo-content{
+                h4.promo-percent{
+                  font-size: 20px;
+                }
+                h2.promo-name {
+                  font-size: 28px;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  /* ------- End Promotion Section ---------*/
+  .newsletter-block {
+    .subscribe-content {
+      .subscribe-block {
+        button.subscribe-btn {
+          font-size: 16px;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-1024 {
+  
+  // Header Right Block
+  .right-block.header-block{
+    ul.shop-element{
+        justify-content: center;
+    }
+  }
+  .main-header {
+    .column_wrap{
+      height: 600px;
+    }
+  }
+    .home_header {
+        .hero_slider {
+          .hero-slide {
+            height: 600px;
+    
+            .slide-image {
+              max-width: 400px;
+            }
+            .slide-content {
+              width: 50%;
+
+              .slide-text {
+                font-size: 24px;
+              }
+              .slide-title {
+                font-size: 32px;
+              }
+              h5.sale-text {
+                font-size: 1.8em;
+              }
+    
+              .slide-btn {
+                font-size: 14px;
+                padding: 14px 27px;
+                margin-top: 14px;
+              }
+            }
+            .slide-content.text-left{
+              left: 10%;
+            }
+            
+          }
+
+        }
+      }
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+   .newsletter-block {
+    .subscribe-content {
+      .subscribe-block {
+        button.subscribe-btn {
+          font-size: 16px;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}
+@include media-1200 {
+  
+  // Header Right Block
+  .right-block.header-block{
+    ul.shop-element{
+        justify-content: flex-end;
+    }
+  }
+  .main-header {
+    .column_wrap{
+      height: 650px;
+    }
+  }
+  .home_header {
+    .hero_slider {
+      .hero-slide {
+        height: 650px;
+
+        .slide-image {
+          max-width: 400px;
+        }
+      
+      .slide-content {
+        width: 50%;
+
+        .slide-text {
+          font-size: 26px;
+        }
+      
+        .slide-title {
+          font-size: 40px;
+        }
+
+        .sale-text {
+          font-size: 1.4em;
+        }
+        .slide-btn {
+          padding: 14px 30px;
+          font-size: 14px;
+        }
+      }
+      }
+
+      .slide-content.text-left{
+        left: 10%;
+      }
+    }
+  }
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+  /* ------- Promotion Section ---------*/
+     .advertisement-section {
+      .promo-grid, .advertise-grid {
+        .promo-wrap, .advertise-wrap {
+          // Promo Block
+          li.promo-wrapper {
+            width: 25%;
+  
+            .banner-block {
+              
+              .contain-banner {
+  
+                .promo-content{
+                  h4.promo-percent{
+                    font-size: 20px;
+                  }
+                  h2.promo-name {
+                    font-size: 28px;
+                  }
+                }
+              }
+  
+            }
+          }
+        }
+      }
+    }
+/* ------- End Promotion Section ---------*/
+  .newsletter-block {
+    .subscribe-content {
+      .subscribe-block {
+        button.subscribe-btn {
+          font-size: 16px;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}
+@include media-1600 {
+  
+  // Header Right Block
+  .right-block.header-block{
+    ul.shop-element{
+        justify-content: flex-end;
+    }
+  }
+  .main-header {
+    .column_wrap{
+      height: 800px;
+    }
+  }
+  .home_header {
+    .hero_slider {
+      .hero-slide {
+      height: 700px;
+      
+      .slide-image {
+        max-width: 600px;
+      }
+    
+      .slide-content {
+        width: 30%;
+        // max-width: 550px;
+
+        .slide-text {
+          font-size: 36px;
+        }
+        .slide-title {
+          font-size: 54px;
+        }
+
+        .sale-text {
+          font-size: 1.8em;
+        }
+      
+
+
+        .slide-btn {
+          padding: 14px 30px;
+          font-size: 14px;
+        }
+      }
+      }
+
+      .slide-content.text-left{
+        left: 12%;
+      }
+    }
+  }
+    /* ------- Service Section ---------*/
+    .service-section {
+      .service-content {
+        .service-text {
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+   /* -------  End Service Section ---------*/
+
+  .newsletter-block {
+    .subscribe-content {
+      .subscribe-block {
+        button.subscribe-btn {
+          font-size: 16px;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1599px) {
+.container, .container-fluid {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+}
+
+
+

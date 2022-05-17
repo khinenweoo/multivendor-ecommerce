@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/public/js/app.js": "/public/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/public/assets/nouislider/nouislider.css": "/public/assets/nouislider/nouislider.css",
+    "/public/assets/nouislider/nouislider.d.ts": "/public/assets/nouislider/nouislider.d.ts",
+    "/public/assets/nouislider/nouislider.js": "/public/assets/nouislider/nouislider.js",
+    "/public/assets/nouislider/nouislider.min.css": "/public/assets/nouislider/nouislider.min.css",
+    "/public/assets/nouislider/nouislider.min.js": "/public/assets/nouislider/nouislider.min.js",
+    "/public/assets/nouislider/nouislider.min.mjs": "/public/assets/nouislider/nouislider.min.mjs",
+    "/public/assets/nouislider/nouislider.mjs": "/public/assets/nouislider/nouislider.mjs"
+}

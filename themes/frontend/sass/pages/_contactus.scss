@@ -1,0 +1,129 @@
+.contactus-page {
+    .contactSection {
+        .title {
+            position: relative;
+            font-size: 1.125rem;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 600;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: calc(50% - 25px);
+                bottom: 0;
+                border-bottom: 2px solid $primary-color;
+                width: 50px;
+            }
+        }
+        h2.sectionTitle {
+            font-size: 2rem;
+            font-family: $hind;
+            text-align: center;
+            line-height: 1.2;
+            display: block;
+            margin: 0 auto;
+            max-width: 720px;
+            margin-bottom: 60px;
+        }
+
+        .column2 {
+            margin-bottom: 50px;
+            .contactTitle {
+                font-size: 1.25rem;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+            .contactContent {
+                margin-top: 20px;
+            }
+        }
+
+        .contactForm{
+            li {
+                position: relative;
+            }
+            li.input, li.textarea {
+                background: #fff;
+            }
+
+            li:not(:first-child) {
+                margin-top: 50px;
+            } 
+
+            input:not(.button) {
+                line-height: 60px;
+                width: 100%;
+            }
+
+            input:not(.button), textarea {
+                padding-left: 30px;
+                color: #122043;
+                font-family: "Open Sans";
+                letter-spacing: .1em;
+                border: 1px solid #dce0e5;
+                background: inherit;
+            }
+
+            label:not(.privacyLabel) {
+                color: #8b8b8b;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                font-weight: 600;
+                position: absolute;
+                top: 0;
+                left: 30px;
+                padding: 0 10px;
+                transform: translate(0, -50%);
+                background: inherit;
+            }
+
+            label {
+                span {
+                    text-transform: lowercase;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                min-height: 180px;
+                padding-top: 25px;
+            }
+
+            .formButton {
+                margin-bottom:60px;
+
+
+                .sendbutton{
+                    cursor: pointer;
+                    border: 0;
+                    padding: 16px 30px;
+                    color: #fff;
+                    display: inline-flex;
+                    position: relative;
+                    background: $primary-color;
+
+                    &:hover {
+                        background: $h2-color;
+                        box-shadow: 1px 1px 8px rgb(0 0 0 / 15%);
+                    }
+                }
+            }
+
+
+        } 
+
+        .addressFooter {
+            li {
+                p {
+                    line-height: 0.9;
+                }
+                i {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+}

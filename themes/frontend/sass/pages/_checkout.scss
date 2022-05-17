@@ -1,0 +1,192 @@
+.checkout-page{
+    .header-text{
+        font-size: 20px!important;
+    }
+    .card {
+        border-radius: 10px;
+        border: 1px solid #E2DFE8;
+        box-shadow: none;
+        color: #000000;
+    }
+    .card-header{
+        background-color: transparent;
+        padding: 1rem 2.2rem .6rem 2.2rem;
+        background-color: transparent;
+        border-bottom: none;
+        h4{
+            font-size: 20px!important;
+        }
+    }
+    .card-body{
+        background-color: transparent;
+        padding: 2.2rem;
+    }
+    .msg-text {
+        color: #fff;
+        border-radius: 10px;
+        padding: 1.4rem;
+        background-color: rgb(131 116 143 / 80%);
+        margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], input[type="phone"], .textarea {
+        box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+        max-width: 100%;
+        width: 100%;
+    }
+
+    input[type="text"], input[type="password"],input[type="email"],input[type="phone"]{
+        border: 1px solid #d7be78;
+        border-radius: 10px;
+        height: 3.2rem;
+        padding-left: calc(1em - 1px);
+        padding-right: calc(1em - 1px);
+        display: inline-flex;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .btn-save {
+        background-color: #D7BE78;
+        color: #000000;
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0.9rem 1.6rem;
+        margin-top: 20px;
+        text-transform: uppercase;
+        transition: all .3s linear 0s;
+
+        &:hover {
+            background-color: rgb(215 190 120 / 84%);
+        }
+    }
+
+    .hover-up:hover {
+        transform: translateY(-5px);
+        transition: all .25s cubic-bezier(.02,.01,.47,1);
+     
+    }
+
+    label.checkbox {
+        display: block;
+        position: relative;
+        padding-left: 2.2rem;
+        cursor: pointer;
+    }
+
+    .column{
+        display: block;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: .75rem;
+    }
+    .column.value {
+        text-align: right;
+    }
+    label.checkbox {
+        span {
+            font-size: 15px;
+            line-height: 1.4;
+        }
+    }
+    .checkmark{
+        height: 18px;
+        width: 20px;
+        border-radius: 4px;
+        border: 1px solid #000000;
+        background-color: #E2DFE8;
+    }
+    .continue-btn {
+        background-color: #D7BE78;
+        color: #000000;
+        border: 1px solid #D7BE78;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.3rem;
+    }
+
+    .cart-summary{
+        background-color: #fafafa;
+        padding: 20px;
+        border-radius: 16px;
+
+        .title-text{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    .step{
+        .diamond{
+            position: relative;
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.15rem 0.45rem;
+            margin-right: 1rem;
+            font-family: $hind;
+            color: #FFFFFF;
+
+            &:before{
+                background-color: #B3B3B3;
+            }
+            &:before{
+                position: absolute;
+                display: block;
+                z-index: -1;
+                content: "";
+                width: 1.5rem;
+                height: 1.5rem;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                transform: rotate(45deg);
+                background-color: $primary-color;
+            }
+        }
+
+    }
+    .single-payment-method {
+        background-color: #fff;
+        border: 1px solid rgb(239 220 184 / 47%);
+        color: #212529;
+        display: block;
+        padding: 0.5rem 1rem;
+        position: relative;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+    .order-payment-method {
+       .single-payment-method {
+        border-bottom: none;
+       }
+       .payment-method-details {
+           padding: 1.2rem 0;
+       }
+    }
+
+    .single-payment-method:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .single-payment-method:last-child {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom: 1px solid rgb(239 220 184 / 47%);
+    }
+
+    .totals {
+        .order-total {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+

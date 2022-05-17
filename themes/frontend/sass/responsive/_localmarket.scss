@@ -1,0 +1,238 @@
+@include media-300 {
+    .farmer-market-page{
+        .grid-item{
+            width: 100%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 120px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: none;
+            }
+
+            .video-block {
+                padding-left: 0;
+            }
+        }
+
+        .search-bar {
+            .search-box-form{
+                width: 100%;
+            }
+        }
+    }
+
+}
+@include media-480 {
+    .farmer-market-page{
+        .grid-item{
+            width: 100%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: none;
+            }
+
+            .video-block {
+                padding-left: 0;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 100%;
+            }
+        }
+    }
+}
+@include media-600 {
+    .farmer-market-page{
+        .grid-item{
+            width: 100%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 260px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: none;
+            }
+
+            .video-block {
+                padding-left: 0;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@include media-768 {
+
+    .farmer-market-page{
+        .grid-item{
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: inline-block;
+            }
+
+            .video-block {
+                padding-left: 5rem;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 80%;
+            }
+        }
+    }
+
+}
+
+@include media-1024 {
+    .farmer-market-page{
+        .grid-item{
+            width: 80%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: inline-block;
+            }
+
+            .video-block {
+                padding-left: 5rem;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 80%;
+            }
+        }
+    }
+}
+@include media-1200 {
+    .farmer-market-page{
+        .grid-item{
+            width: 80%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: inline-block;
+            }
+
+            .video-block {
+                padding-left: 5rem;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 70%;
+            }
+        }
+    }
+}
+@include media-1440 {
+    .farmer-market-page{
+        .grid-item{
+            width: 80%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: inline-block;
+            }
+
+            .video-block {
+                padding-left: 5rem;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 70%;
+            }
+        }
+    }
+}
+@include media-1600 {
+    .farmer-market-page{
+        .grid-item{
+            width: 80%;
+            .blog-tile {
+                .tile {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .event-intro {
+            .intro-block {
+                display: inline-block;
+            }
+
+            .video-block {
+                padding-left: 5rem;
+            }
+        }
+        .search-bar {
+            .search-box-form{
+                width: 70%;
+            }
+        }
+    }
+}

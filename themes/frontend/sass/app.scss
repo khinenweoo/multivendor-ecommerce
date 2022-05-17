@@ -1,0 +1,48 @@
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+// Slick
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+@import '~toastr/toastr';
+
+// Base
+@import 'base/typography';
+@import 'base/base';
+@import 'base/reset';
+@import 'responsive/gridframework';
+
+
+//Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/navbar';
+@import 'layout/sidebar';
+
+//Mixins
+
+//Pages
+@import 'pages/home';
+@import 'pages/shop';
+@import 'pages/product';
+@import 'pages/categorylist';
+@import 'pages/cart';
+@import 'pages/becomeseller';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/useraccount';
+@import 'pages/blog';
+@import 'pages/contactus';
+@import 'pages/checkout';
+@import 'pages/localmarket';
+
+//Components
+@import 'components/cart';
+
+// Responsiveness
+@import 'responsive/home';
+@import 'responsive/navbar';
+@import 'responsive/cart';
+@import 'responsive/localmarket';
+
+

@@ -1,0 +1,176 @@
+.become-seller-page {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    .feature_intro {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: $primary-color;
+    }
+
+    .header_content {
+        .small-text {
+            color: #fff;
+        }
+        .custom-header {
+            font-family: inherit;
+            color: #fff;
+            font-size: 40px;
+        }
+        .introduction {
+            color: #fff;
+            font-size: 24px;
+            line-height: 3.5rem;
+        }
+        .signup-seller {
+            background-color: #333;
+            border: 1px solid $primary-color;
+            position: relative;
+            padding: 14px 30px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
+            outline: none;
+            border-radius: 0!important;
+            margin-top: 15px;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 0;
+                height: 100%;
+                transition: .25s;
+              }
+        }
+        .signup-seller:hover:before{
+            width: 100%;
+            background-color: #fff !important;
+          }
+          .signup-seller:hover{
+            color:$primary-color!important;
+          }
+    }
+
+    .whychooseus{
+        padding-top: 50px;
+        padding-bottom: 70px;
+
+        .whychoose_title {
+            h2 {
+                font-family: $hind;
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+        .image_wrap {
+            position: relative;
+            width: 80%;
+            padding: 30px;
+            img{
+                height: auto;
+                border-radius: 16px;
+            }
+        }
+        .whychoose-image_wrap {
+            position: relative;
+            top: 0;
+            left: 80px;
+            width: 350px;
+            height: 260px;
+            border-radius: 16px;
+            background-color: $primary-color;
+            .partner-img {
+                width: 100%;
+                height: 230px;
+                position: absolute;
+                top: 20%;
+                right: 20%;
+                border-radius: 16px;
+            }
+        }
+
+        .whychooseus_wrap {
+            padding-bottom: 60px;
+            .title_wrapper{
+                text-align: center;
+                height: 120px;
+                width: auto;
+                margin-bottom: 40px;
+            }
+            .whychoose_content {
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: rgba(0,0,0,0.65);
+                }
+            }
+        }
+
+    }
+    .partner-plan-section {
+        background-color: #f4f3ef;
+        padding-top: 50px;
+        padding-bottom: 80px;
+
+        .section-title {
+            margin-bottom: 40px;
+            h2 {
+                font-family: $hind;
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+
+        .single-plan-wrap {
+            position: relative;
+            min-height: 125px;
+            padding: 26px 30px;
+            background: #fff;
+            float: left;
+            border-radius: 14px;
+
+            .title {
+                font-size: 24px;
+                color: #000;
+                letter-spacing: .24px;
+                line-height: 24px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .text {
+                font-size: 16px;
+                color: #666;
+                line-height: 24px;
+                letter-spacing: .2px;
+            }
+            .joinus-btn-wrap {
+                text-align: center;
+                margin-top: 40px;
+                .joinus-btn {
+                    display: inline-block;
+                    height: 52px;
+                    margin: 0 auto;
+                    line-height: 52px;
+                    text-align: center;
+                    background: $primary-color;
+                    padding: 0 34px;
+                    border-radius: 30px;
+                    font-size: 16px;
+                    color: #fff;
+                    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+                    letter-spacing: .2px;
+                }
+            }
+        }
+    }
+}

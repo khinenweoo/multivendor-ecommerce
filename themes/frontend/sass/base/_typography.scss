@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,300italic,400italic,700italic');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// Fonts
+$poppins: 'Poppins', sans-serif;
+$hind: 'Hind Siliguri', sans-serif;
+$montserrat: 'Montserrat',sans-serif;
+$dancing: 'Dancing Script', cursive;
+$lobster: 'Lobster', cursive;
+// Font Sizes
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+// $primary-color: #cd7752;
+$primary-color: #ba8b33;
+$h1-color: #333333;
+$h2-color: #333;
+$h3-color: #333333;
+
+//Headings
+h1 {
+    font-family: $hind;
+    font-weight: 700;
+    color: $h1-color;
+    font-size: 2em;
+    line-height: 45px;
+    padding-top: 10px;
+}
+
+h2 {
+    font-family: $hind;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: $h2-color;
+}
+
+h3 {
+    font-family: $hind;
+    font-size: 1em;
+    font-weight: 600;
+    color: $h3-color;
+}
+
+body{
+    font-family: $poppins;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: #222;
+}

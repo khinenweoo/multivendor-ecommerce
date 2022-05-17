@@ -1,0 +1,171 @@
+/* ---------- Customer Dashboard Layout ---------- */
+.section_account {
+    padding: 30px 0 60px 0;
+    .sidebar-panel{
+        display: block;
+        position: relative;
+        .panel_header {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            
+            .avatar-view{
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                
+                .user-avatar-icon {
+                    min-width: 60px;
+                    height: 60px;
+                }
+            }
+            .figure {
+                flex-basis: 100%;
+                padding-left: 10px;
+                caption {
+                    font-size: 16px;
+                    color: #666;
+                }
+                p {
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .panel_content {
+            ul {
+                margin: 0;
+                padding: 0;
+                border: 1px solid #d1d1d1;
+                li {
+                    background-color: #fff;
+                    border-bottom: 1px solid #d1d1d1;
+
+                    a {
+                        display: block;
+                        padding: 15px 20px;
+                        line-height: 20px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #000;
+                        text-transform: capitalize;
+
+                        i {
+                            margin-right: 10px;
+                        }
+                        &:hover {
+                            background-color: $primary-color;
+                            color: #fff;
+                        }
+                    }
+                }
+                li:last-child {
+                    border-bottom: 0;
+                }
+                li.active {
+                    background-color: $primary-color;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* ---------- Customer Account Information ---------- */
+.section_right {
+    .card {
+        border: 1px solid #e4d0a9;
+        border-radius: 5px;
+        background-color: #FFF;
+        margin-bottom: 24px;
+        .card-header {
+            background-color: #e4d0a9;
+            border-radius: 4px 4px 0 0;
+            border-top: 1px solid #e4d0a9;
+            color: #333;
+            font-size: 14px;
+            padding: 15px 16px;
+        }
+
+    }
+}
+/* ---------- Form Input Style ---------- */
+.customer-dashboard {
+    .section_right{
+        .form-acc-setting {
+            .form-group {
+                label {
+                    margin-bottom: 1.5rem;
+                    font-weight: 400;
+                    color: #000;
+                    line-height: 1em;
+                }
+                input {
+                    
+                        outline: 0;
+                        font-size: 14px;
+                        padding: 0 20px;
+                        height: 50px;
+                        background-color: transparent;
+                        border: 1px solid #ddd;
+                        border-radius: 0;
+                        box-shadow: 0 0 transparent;
+                        transition: all .4s ease;
+                    
+                }
+            }
+            .ps-btn {
+                display: inline-block;
+                text-decoration: none;
+                padding: 8px 16px;
+                font-size: 15px;
+                margin: 5px 0 0 20px;
+                border: 1px solid #333333;
+                background: #333333;
+                color: white;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+            }
+        }
+    }
+
+}
+
+/* ---------- Purchases Page ---------- */
+.purchases-header{
+    background: #f6f6f6;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    .filter-options-wrap{
+        .purchase-filter {
+            color: #222;
+            padding: 8px 26px;
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            text-shadow: 0px 1px 0px #eee;
+            box-shadow: inset -1px 1px 5px -1px #bebebe;
+        }
+    }
+
+    .search-wrap {
+        border-color: rgba(14, 14, 14, 0.28);
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+        border-radius: 6px;
+        background-color: #fff;
+        
+        input{
+            border: 0!important;
+            padding: 3px 20px!important;
+        }
+    }
+}

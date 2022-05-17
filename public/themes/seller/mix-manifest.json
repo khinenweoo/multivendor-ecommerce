@@ -1,0 +1,21 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/public/assets/slick/ajax-loader.gif": "/public/assets/slick/ajax-loader.gif",
+    "/public/assets/slick/config.rb": "/public/assets/slick/config.rb",
+    "/public/assets/slick/slick-theme.css": "/public/assets/slick/slick-theme.css",
+    "/public/assets/slick/slick-theme.less": "/public/assets/slick/slick-theme.less",
+    "/public/assets/slick/slick-theme.scss": "/public/assets/slick/slick-theme.scss",
+    "/public/assets/slick/slick.css": "/public/assets/slick/slick.css",
+    "/public/assets/slick/slick.js": "/public/assets/slick/slick.js",
+    "/public/assets/slick/slick.less": "/public/assets/slick/slick.less",
+    "/public/assets/slick/slick.min.js": "/public/assets/slick/slick.min.js",
+    "/public/assets/slick/slick.scss": "/public/assets/slick/slick.scss",
+    "/public/assets/nouislider/nouislider.css": "/public/assets/nouislider/nouislider.css",
+    "/public/assets/nouislider/nouislider.d.ts": "/public/assets/nouislider/nouislider.d.ts",
+    "/public/assets/nouislider/nouislider.js": "/public/assets/nouislider/nouislider.js",
+    "/public/assets/nouislider/nouislider.min.css": "/public/assets/nouislider/nouislider.min.css",
+    "/public/assets/nouislider/nouislider.min.js": "/public/assets/nouislider/nouislider.min.js",
+    "/public/assets/nouislider/nouislider.min.mjs": "/public/assets/nouislider/nouislider.min.mjs",
+    "/public/assets/nouislider/nouislider.mjs": "/public/assets/nouislider/nouislider.mjs"
+}
