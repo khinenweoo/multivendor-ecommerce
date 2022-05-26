@@ -24,24 +24,28 @@ class FrontHomepageComponent extends Component
     public function render()
     {
                 //Get Featured Categories
+                // $featuredCategories = Category::where('is_featured',1)->limit(12)->orderBy('id','DESC')->get();
                 $featuredCategories = Category::where('is_featured',1)->limit(12)->orderBy('id','DESC')->get();
 
                 //Get Hot Deal Stores
                 $active_stores = Shop::where('is_active', 1)->inRandomOrder()->get()->take(10);
-        
+
                 // Get Featured Stores which are active and not beyond expiry date
                 $current_time = Carbon::now();
-                $query = DB::table('shops');
-                $query->where('is_active', '=', 1);
-                $query->where('featured_expiry_date', '>', $current_time);
-                $featured_stores = $query->get();
-        
+                $featured_stores = Shop::where([
+                    ['is_active', '=', 1],
+                    ['featured_expiry_date', '>', $current_time]
+                ])->get();
+
+
                 //Get parent Categories
                 $categories = Category::whereNull('parent_id')->get();
+
         
                 //Get Latest Products
                 // $new_products = Product::orderBy('created_at','DESC')->get()->take(20);
                 $new_products = Product::where(['conditions' => 'new', 'status' => 'active'])->limit(20)->get();
+               
         
                 //Trending Products
                 $trending_products = Product::where(['conditions' => 'popular', 'status'=> 'active'])->limit(20)->get();

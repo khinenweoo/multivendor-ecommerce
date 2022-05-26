@@ -32,18 +32,17 @@
                     <div class="prodct-price my-2">
                         <span class="price"><strong>MMK {{ number_format($item->price, 2) }}</strong></span>
                     </div>
-                    @php
-                    
-                        $item_shop = App\Models\Shop::where('seller_id', $item->seller_id)->first();
 
-                    @endphp
-
-                    @if($product->added_by == 'seller')
+                    @if(isset($shop))
                     <div class="product-seller pb-3">
-                        <i class="fa fa-home"></i>Store: {{$item_shop->shop_name}}<span></span>
+                        <i class="fa fa-home"></i>Store: {{$shop->shop_name}}<span></span>
+                    </div>
+                    @elseif($product->added_by == 'Myoe Pya')
+                    <div class="product-seller pb-3">
+                    <i class="fa fa-home"></i>Store: Myoe Pya<span></span>
                     </div>
                     @else
-                    <div class="product-seller">
+                    <div class="product-seller pb-3">
                     <i class="fa fa-home"></i>Store: Admin<span></span>
                     </div>
                     @endif
@@ -52,14 +51,13 @@
             <!-- single product end -->
             @endforeach
         @endif
-
-     
         </div>
     </div>
     </section>
     <!-- End Similar Items Section -->
     <!-- Compatible Products Section -->
-    <section class="compatible_products">
+
+    <!-- <section class="compatible_products">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -277,5 +275,6 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
+
     <!-- End Compatible Products Section -->

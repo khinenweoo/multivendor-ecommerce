@@ -242,7 +242,7 @@
                           $children = App\Models\Category::where('parent_id', $category->id)->get();
                         @endphp
                       <li class="{{ $children->isNotEmpty() ? 'has-mega-menu' : '' }} ">
-                        <a href="{{route('category.products', ['category_slug'=>$category->slug])}}">
+                        <a href="{{route('category.product', ['category_slug'=>$category->slug])}}">
                         {{$category->name}}
                         </a>
                       
@@ -255,13 +255,13 @@
                                 $grandChild = App\Models\Category::where('parent_id', $child->id)->get();
                                 @endphp
                               <div class="level-one">
-                                <a class="sub-category-link" href="{{route('category.products', ['category_slug'=>$child->slug])}}">{{$child->name}}</a>
+                                <a class="sub-category-link" href="{{route('category.product', ['category_slug'=>$child->slug])}}">{{$child->name}}</a>
                             
                                 @if($grandChild->isNotEmpty()) 
                                       <ul class="mega-menu__list grand-child-list">
                                         @foreach ($grandChild as $c)
                                           <li>
-                                            <a href="{{route('category.products', ['category_slug'=>$c->slug])}}">{{$c->name}}</a>
+                                            <a href="{{route('category.product', ['category_slug'=>$c->slug])}}">{{$c->name}}</a>
                                           </li>
                                         @endforeach
                                       </ul>

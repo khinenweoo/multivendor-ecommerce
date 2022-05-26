@@ -16,6 +16,7 @@ use App\Mail\OrderConfirmationMail;
 use App\Mail\ReceiveOrderMail;
 use Mail;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class ClientController extends Controller
 {
@@ -146,9 +147,10 @@ class ClientController extends Controller
 
                         if(count($itemsArray) > 1 ){
                             foreach($itemsArray as $key => $item){
-                                $productId = Product::where('sku', $item[0])->pluck('product_id')->first();
+                                $productId = Product::where('sku', $item[0])->value('product_id');
+                              
                                 
-                                if(isset($productId)){
+                                if($productId != null){
                                     $orderItem = new OrderItem();
                                     $orderItem->product_id = $productId;
                                     $orderItem->order_id = $order->order_id;
@@ -158,11 +160,14 @@ class ClientController extends Controller
                                 }else{
                                     // Store product if the item not exist on database
                                     $product = new Product();
+                                    $product->category_id = 1;
                                     $product->product_name =  $item[1];
+                                    $product->product_slug = Str::slug($item[1]);
                                     $product->sku =  $item[0];
                                     $product->short_description = "MP Item";
                                     $product->quantity = $item[2];
                                     $product->price = $item[3];
+                                    $product->added_by = 'Myoe Pya';
                                     $product->save();
 
 
@@ -179,8 +184,10 @@ class ClientController extends Controller
                             
                         }else{
                             foreach($itemsArray as $item){
-                            $productId = Product::where('sku', $item[0])->pluck('product_id')->first();
-                                if(isset($productId)){
+  
+                            $productId = Product::where('sku', $item[0])->value('product_id');
+
+                                if($productId != null){
                                     $orderItem = new OrderItem();
                                     $orderItem->product_id = $productId;
                                     $orderItem->order_id = $order->order_id;
@@ -188,6 +195,19 @@ class ClientController extends Controller
                                     $orderItem->quantity = $item[2];
                                     $orderItem->save();
                                 }else {
+                                    // Store product if the item not exist on database
+                                    $product = new Product();
+                                    $product->category_id = 1;
+                                    $product->product_name =  $item[1];
+                                    $product->product_slug = Str::slug($item[1]);
+                                    $product->sku =  $item[0];
+                                    $product->short_description = "MP Item";
+                                    $product->quantity = $item[2];
+                                    $product->price = $item[3];
+                                    $product->added_by = 'Myoe Pya';
+                                    $product->save();
+
+                                     // Store new order item
                                     $orderItem = new OrderItem();
                                     $orderItem->product_id = 1;
                                     $orderItem->order_id = $order->order_id;
@@ -228,8 +248,8 @@ class ClientController extends Controller
                     ];
 
                     // send mail to user and owner
-                    Mail::to($buyerMail)->send(new OrderConfirmationMail($orderData));
-                    Mail::to($ownerMail)->send(new ReceiveOrderMail($orderData));
+                    // Mail::to($buyerMail)->send(new OrderConfirmationMail($orderData));
+                    // Mail::to($ownerMail)->send(new ReceiveOrderMail($orderData));
 
 
                     // set data into response

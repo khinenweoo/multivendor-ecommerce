@@ -43,12 +43,12 @@ Route::group(['middleware' => 'web'], function() {
     /** LISTS, CATEGORY PRODUCT */
     Route::get('/shop', 'App\Http\Livewire\Front\ShopComponent')->name('shop.products');
     //filter by category
-    Route::get('/shop/{category_slug}', 'App\Http\Livewire\Front\CategoryComponent')->name('category.products');
+    Route::get('/shop/{category_slug}', 'App\Http\Livewire\Front\CategoryComponent')->name('category.product');
     //filter by brand
     Route::get('/shop/brands/{brand_slug}', 'App\Http\Livewire\Front\BrandComponent')->name('brand.products');
 
     // Product Detail Page
-    Route::get('/shop/product-detail/{product_slug}', 'App\Http\Livewire\ProductDetailComponent')->name('product.detail');
+    Route::get('/product/detail/{product_slug}', 'App\Http\Livewire\ShowProductDetail')->name('product.detail');
 
     // Cart Page
     Route::get('/cart', 'App\Http\Livewire\CartComponent')->name('product.cart');

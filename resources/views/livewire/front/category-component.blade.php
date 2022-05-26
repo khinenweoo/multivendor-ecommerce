@@ -63,7 +63,7 @@
                                 @foreach ($subcategories as $subcategory)
                                     
                                     <li class="{{count($subcategories) > 0 ? 'sub-level': ''}}">
-                                        <a href="{{route('category.products', ['category_slug'=>$subcategory->slug])}}" class="cat-link">
+                                        <a href="{{route('category.product', ['category_slug'=>$subcategory->slug])}}" class="cat-link">
                                             {{ $subcategory->name }}
                                         </a>
                                             @php

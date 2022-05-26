@@ -95,12 +95,12 @@
                                 <div class="col-6 col-xl-2 col-lg-2 col-md-3 col-sm-4 cat-col">
                                     <div class="item-cat">
                                         <div class="item-image">
-                                            <a href="{{route('category.products', ['category_slug'=>$category->slug])}}" class="category-link">
+                                            <a href="{{route('category.product', ['category_slug'=>$category->slug])}}" class="category-link">
                                                 <img src="{{ asset('storage/'.$category->category_image) }}" alt="category photo">
                                             </a>
                                             <div class="cat-name">
                                                 <h3>
-                                                    <a href="{{route('category.products', ['category_slug'=>$category->slug])}}">{{ $category->name }}</a>
+                                                    <a href="{{route('category.product', ['category_slug'=>$category->slug])}}">{{ $category->name }}</a>
                                                 </h3>
                                             </div>
                                         </div>
@@ -132,7 +132,7 @@
                             <div class="tab-pane active show" id="new_arrivals">
                                 <div class="new-arrivals product-wrap" id="">
                                     <div class="row">
-                                       
+                                    @if($new_products)
                                         @foreach ($new_products as $nproduct)
                                         <div class="col-6 col-xl-2 col-lg-2 col-md-3 item">
                                             <div class="single-product product-card">
@@ -153,10 +153,7 @@
                                                             <div class="product-price">
                                                                 <span class="price">MMK {{ $nproduct->price }}</span>
                                                             </div>
-                                                            @php
-                                                                $prod_shop = App\Models\Shop::findOrFail($nproduct->seller_id);
-                                                               
-                                                            @endphp
+                                                    
                                                          
                                                             @if($nproduct->added_by == 'seller')
                                                             <div class="product-seller pb-3">
@@ -174,7 +171,7 @@
                                             </div>
                                         </div>
                                         @endforeach   
-                                   
+                                    @endif
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +200,7 @@
                                                             @php
                                                                 $prod_shop = App\Models\Shop::where('seller_id', $tproduct->seller_id)->first();
                                                             @endphp
-                                                            @if($nproduct->added_by == 'seller')
+                                                            @if($tproduct->added_by == 'seller')
                                                             <div class="product-seller pb-3">
                                                                 <i class="fa fa-home"></i>Store: <span>{{$tproduct->seller->name}}</span>
                                                             </div>

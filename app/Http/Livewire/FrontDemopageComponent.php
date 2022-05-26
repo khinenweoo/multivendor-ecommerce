@@ -35,7 +35,6 @@ class FrontDemopageComponent extends Component
 
     public function render()
     {
-
         //Trending Products
         $trending_products = Product::where(['status'=> 'active'])->limit(20)->get();
         return view('livewire.front-demopage-component', [

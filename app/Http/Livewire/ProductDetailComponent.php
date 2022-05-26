@@ -11,15 +11,39 @@ use Cart;
 
 class ProductDetailComponent extends Component
 {
-    public $product_slug;
+    protected $product;
+    protected $product_slug;
+    protected $product_category;
+    protected $category_name;
+    protected $category_slug;
+    protected $parentcategory;
     public $qty;
     public $attributes = [];
-
+    protected $categoryId;
 
     public function mount($product_slug)
     {
-        $this->product_slug = $product_slug;
+        $this->product_slug =  $product_slug;
+        $this->product = Product::with('rel_products')->where('product_slug', $product_slug)->first();
+        $this->categoryId = $this->product->category_id;
         $this->qty = 1;
+        
+        //Get Product's Shop
+        if($this->sellerId) {
+            $this->product_shop = Shop::where('seller_id', $this->sellerId )->first();
+        }
+        // Get Category of the product
+        $this->product_category = Category::where('id', $this->categoryId)->first();
+        // 
+        $this->category_name = $this->product_category->name;
+        $this->category_slug = $this->product_category->slug;
+
+        $cat_parentId = $this->product_category->parent_id;
+        if($cat_parentId ==! null){
+            $this->parentcategory = $this->product_category->parent;
+        }else{
+            $this->parentcategory = null;
+        }
     }
 
     /**
@@ -33,24 +57,18 @@ class ProductDetailComponent extends Component
         // Get Product with related products
         $product = Product::with('rel_products')->where('product_slug', $this->product_slug)->first();
        
-        // Get Category Name of the product
-        $prod_category = Category::where('id', $product->category_id)->first();
-        $category_name = $prod_category->name;
-
-        if($prod_category->parent_id ==! null){
-            $parentcategory = $prod_category->parent;
-        }
 
         // Get Product with Seller
         $prod_seller = Product::with('seller')->where('product_slug', $this->product_slug)->first();
 
 
         return view('livewire.product-detail-component',  [
-            'product'=>$product,
-            'parentcategory' => $parentcategory,
-            'prod_category' => $prod_category,
+            'product'=>$this->product,
+            'parentcategory' => $this->parentcategory,
+            'prod_category' => $this->product_category,
+            'category_name' => $this->category_name,
+            'category_slug' => $this->category_slug,
             'prod_seller' => $prod_seller,
-            'category_name' => $category_name
             ])->layout("layouts.base");
     }
 
@@ -74,7 +92,6 @@ class ProductDetailComponent extends Component
 
         $this->emitTo('cart-count-component', 'refreshComponent');
         session()->flash('message', 'Successfully Added To Cart!');
-        return redirect()->back();
     }
 
 

@@ -23,10 +23,9 @@ class DatabaseSeeder extends Seeder
             SellerSeeder::class,
         ]);
   
-        \App\Models\User::factory(30)->create();      
-        \App\Models\Brand::factory(30)->create();      
-        \App\Models\Seller::factory(15)->create();    
-        \App\Models\Shop::factory(15)->create();    
+        \App\Models\User::factory(10)->create();      
+        \App\Models\Brand::factory(20)->create();      
+        \App\Models\Shop::factory(5)->create();    
 
     }
 }

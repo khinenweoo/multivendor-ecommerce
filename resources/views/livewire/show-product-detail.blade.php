@@ -1,39 +1,7 @@
 <div>
-
 <main class="product-detail-page">
-    <!-- Breadcrumbs -->
-    <div class="breadcrumb-section">
-        <div class="container-fluid">
-             <div class="row">
-                 <div class="col-md-12 col-sm-12">
-                     <nav class="breadcrumb" wire:ignore.self >
-                         <ul>
-                            <li class="nav-item">
-                                 <a href="{{ route('home') }}" class="permal-link">Home</a>
-                            </li>
-                            @if($parentcategory != null)
-                            <li class="nav-item">
-                            <a href="">{{$parentcategory->name}}</a>
-                            </li>
-                            @endif
-
-                            <li class="nav-item">
-                                <a href="">{{$category_name}}</a>
-                            </li>
-                            <li class="nav-item">
-           
-                                <a href="#">{{$product->product_name}}</a>
-                            </li>
-                         </ul>
-                     </nav>
-                 </div>
-             </div>
-        </div>
-    </div>
-    <!-- End Breadcrumbs -->
-
     <!-- Product Detail -->
-    <section class="product-detail">
+    <section class="product-detail" wire:ignore.self>
         <div class="container-fluid">
         <div class="row">
         <div class="toast-container d-block w-100">
@@ -719,29 +687,5 @@
         </div>
     </section>
     <!-- End Product Detail -->
-    <!-- related product area start -->
-    @include('product._related-product')
 </main>
-
-<!-- EXTRA JS -->
-@section('extra_js')
-<script>
-    function increaseCount(a, b) {
-  var input = b.previousElementSibling;
-  var value = parseInt(input.value, 10);
-  value = isNaN(value) ? 0 : value;
-  value++;
-  input.value = value;
-}
-function decreaseCount(a, b) {
-  var input = b.nextElementSibling;
-  var value = parseInt(input.value, 10);
-  if (value > 1) {
-    value = isNaN(value) ? 0 : value;
-    value--;
-    input.value = value;
-  }
-}
-</script>
-@endsection
 </div>
