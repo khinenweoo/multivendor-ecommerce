@@ -1,5 +1,36 @@
 <div>
 <main class="product-detail-page">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb-section">
+        <div class="container-fluid">
+             <div class="row">
+                 <div class="col-md-12 col-sm-12">
+                     <nav class="breadcrumb" wire:ignore.self >
+                         <ul>
+                            <li class="nav-item">
+                                 <a href="{{ route('home') }}" class="permal-link">Home</a>
+                            </li>
+                            @if($parentcategory != null)
+
+                            <li class="nav-item">
+                            <a href="#">{{$parentcategory->name}}</a>
+                            </li>
+                            @endif
+
+                            <li class="nav-item">
+                                <a href="{{route('category.product', ['category_slug'=>$product_category->slug])}}">{{$category_name}}</a>
+                            </li>
+                            <li class="nav-item">
+           
+                                <a href="#">{{$product->product_name}}</a>
+                            </li>
+                         </ul>
+                     </nav>
+                 </div>
+             </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
     <!-- Product Detail -->
     <section class="product-detail" wire:ignore.self>
         <div class="container-fluid">

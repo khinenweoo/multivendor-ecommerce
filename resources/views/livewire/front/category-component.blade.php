@@ -52,26 +52,24 @@
                <div class="sidebar-contain">
                     <!-- sidebar categorie widget start -->
                    <div class="widget filter-widget mb-30">
-                       <h4 class="widget-title"><i class="fa fa-bars"></i><span>Sub Categories</span></h4>
+                       <h4 class="widget-title"><i class="fa fa-bars"></i><span>Categories</span></h4>
                        <div class="widget-content">
                             <ul class="sidebar_categories">
+                       
+                            @if (!empty($sub_category))
                                 @php
-                                    $subcategories = App\Models\Category::where('parent_id', $category_products->id)->get();
+                                    $childcategories = App\Models\Category::where('parent_id', $sub_category->id)->get();
+                     
                                 @endphp
-                                @if (count($subcategories))
-                                
-                                @foreach ($subcategories as $subcategory)
+                                 <!-- Loop all child categories -->
+                                @foreach ($childcategories as $childcategory)
                                     
-                                    <li class="{{count($subcategories) > 0 ? 'sub-level': ''}}">
-                                        <a href="{{route('category.product', ['category_slug'=>$subcategory->slug])}}" class="cat-link">
-                                            {{ $subcategory->name }}
+                                    <li class="{{count($childcategories) > 0 ? 'sub-level': ''}}">
+                                        <a href="{{route('category.product', ['category_slug'=>$sub_category->slug])}}" class="cat-link">
+                                            {{ $childcategory->name }}
                                         </a>
-                                            @php
-                                            $childcategories = App\Models\Category::where('parent_id', $subcategory->id)->get();
-                                            @endphp
-
-                                                <!-- Loop all child categories -->
-                                                @foreach($childcategories as $childcategory)
+                                              
+                                         
                                                     <!-- Check whether child categories has products -->
                                                     @php
                                                         $cat_products = $childcategory->products;
@@ -82,7 +80,7 @@
                                                     @else
                                                     <span class="prod-count">({{count($cat_products)}})</span>
                                                     @endif
-                                                @endforeach
+                                               
                                         
                                     </li>
                                 @endforeach
@@ -102,16 +100,17 @@
                     <!-- Brands Filter -->
                     <div class="widget filter-widget mb-30" id="filter-selectors">
                         <h4 class="widget-title">     
-                           <span class="filter-title">Filter By Top Brands</span>
+                           <span class="filter-title">Filter By Brands</span>
                         </h4>
                         <div class="widget-content">
                         <ul class="check-list multiple">
-                               @forelse ($brands as $brand)
+ 
+                               @forelse ($product_brands as $product_brand)
                                <li class="check-list-item">
                                    <span class="custom-checkbox">
                                        <input type="checkbox" class="input_brand">
                                    </span>
-                                   <a href="{{route('brand.products', ['brand_slug'=>$brand->brand_slug])}}" class="check-link">{{$brand->brand_name}}</a>
+                                   <a href="" class="check-link">{{$product_brand->brand->brand_name}}</a>
                                </li>
 
                                @empty

@@ -33,7 +33,7 @@ class ProductFactory extends Factory
          return [
             'category_id' =>  $this->faker->randomElement(Category::pluck('id')->toArray()),
             'brand_id' => $this->faker->randomElement(Brand::pluck('brand_id')->toArray()),
-            'seller_id' => $this->faker->randomElement(Seller::pluck('id')->toArray()),
+            'seller_id' => $this->faker->unique()->randomElement(Seller::pluck('id')->toArray()),
             'product_name' => $product_name,
             'product_slug' => $slug,
             'sku' => 'PD00'.$this->faker->unique()->randomNumber($nbDigits=5, $strict=false),

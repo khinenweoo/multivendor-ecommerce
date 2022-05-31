@@ -415,6 +415,78 @@ class CategorySeeder extends Seeder
             'slug' => Str::slug($name),
             'category_image' => 'default_image.png',
         ]);
+        Category::create([
+            'parent_id' => '8',
+            'name' => ($name = 'Women Perfumes'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '8',
+            'name' => ($name = 'Men Perfumes'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '9',
+            'name' => ($name = 'Shampoo'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '9',
+            'name' => ($name = 'Hair Treatment'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '10',
+            'name' => ($name = 'Foundation'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '10',
+            'name' => ($name = 'Eyes'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '10',
+            'name' => ($name = 'Lips'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '11',
+            'name' => ($name = 'Facial Cleansers'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '11',
+            'name' => ($name = 'Essence & Serums'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '11',
+            'name' => ($name = 'Sunscream'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '12',
+            'name' => ($name = 'Feminine Care'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
+        Category::create([
+            'parent_id' => '12',
+            'name' => ($name = 'Waxing and Grooming'),
+            'slug' => Str::slug($name),
+            'category_image' => 'default_image.png',
+        ]);
 
     }
 }

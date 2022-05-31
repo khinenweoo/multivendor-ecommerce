@@ -276,7 +276,7 @@
         <section class="vendor-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                         <div class="vendors_block">
                             <div class="box-slider-top">
                                 <div class="block-title">
@@ -285,7 +285,7 @@
                             </div>
                             <div class="box-slider-bottom">
                                 <div class="row">
-                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+                                    <div class="">
                                         @if($featured_stores->count() > 0 )
                                         <div class="vendor-slider" id="vendor-slider" wire:ignore>
                                             @foreach($featured_stores as $store)
@@ -321,14 +321,14 @@
                                         </div>
                                         @endif
                                     </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                                        <div class="adv_block">
-                                            <img src="{{ asset('frontend/images/home/ads-side.jpg') }}" alt="">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                        <div class="adv_block">
+                                            <img src="{{ asset('frontend/images/home/ads-side.jpg') }}" alt="">
+                                        </div>
                     </div>
                 </div>
             </div>

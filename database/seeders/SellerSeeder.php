@@ -32,8 +32,8 @@ class SellerSeeder extends Seeder
             'updated_at' => now()
         ]);
         Seller::create([
-            'name' => 'Seller1',
-            'username' => 'Seller 1',
+            'name' => 'Capital Seller',
+            'username' => 'Capital',
             'role' => 'owner',
             'email' => 'seller@demo.com',
             'email_verified_at' => now(),
@@ -49,8 +49,8 @@ class SellerSeeder extends Seeder
             'updated_at' => now()
         ]);
         Seller::create([
-            'name' => 'Seller2',
-            'username' => 'Seller 2',
+            'name' => 'City Mart',
+            'username' => 'City Mart Retailer',
             'role' => 'owner',
             'email' => 'seller2@demo.com',
             'email_verified_at' => now(),
@@ -66,8 +66,8 @@ class SellerSeeder extends Seeder
             'updated_at' => now()
         ]);
         Seller::create([
-            'name' => 'Seller3',
-            'role' => 'owner',
+            'name' => 'Century Mart',
+            'role' => 'retailer',
             'email' => 'seller3@demo.com',
             'email_verified_at' => now(),
             'password' =>\Hash::make('vendorsecret'),
@@ -82,8 +82,8 @@ class SellerSeeder extends Seeder
             'updated_at' => now()
         ]);
         Seller::create([
-            'name' => 'Seller4',
-            'role' => 'owner',
+            'name' => 'Capital Mart',
+            'role' => 'retailer',
             'email' => 'seller4@demo.com',
             'email_verified_at' => now(),
             'password' =>\Hash::make('vendorsecret'),

@@ -51,6 +51,7 @@ class CategoryComponent extends Component
 
         if($category->parent_id !== null)
         {
+            $sub_category = $category->parent;
             $parent_category = $category->parent;
         }else {
             $parent_category = null;
@@ -82,13 +83,18 @@ class CategoryComponent extends Component
             ->paginate($this->pagesize);
         }
    
-        $brands = Brand::with('products')->get();
+        // Get Brands which category is as same as the filterd category
+        $product_brands = Product::where('category_id', $category_id)
+        ->with('brand')->get();
+        
+
         return view('livewire.front.category-component', [
-            'brands'=>$brands, 
             'category_products' => $category,
             'category_name' => $category_name,
+            'sub_category' => $sub_category,
             'parent_category' => $parent_category,
             'products' => $products, 
+            'product_brands' => $product_brands,
              ])->layout("layouts.base");
     }
  

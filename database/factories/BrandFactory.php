@@ -21,9 +21,10 @@ class BrandFactory extends Factory
      */
     public function definition()
     {
+        $brand_names = ['Vistra', 'Ipanema', 'Pretty Fit', 'Nestle', 'MDS', 'Panasonic', 'ZARA', 'Star Secret','Kerasys','H&M'];
         return [
-            'brand_name' => ($name = $this->faker->streetName.random_int(0,99)),
-            'brand_slug' => Str::slug($name),
+            'brand_name' => $this->faker->unique()->randomElement($brand_names),
+            'brand_slug' => $this->faker->unique()->words($nb=2,$asText=true),
             'brand_image' => 'brand-sample.png',
             'brand_description' => $this->faker->realText(60),
         ];

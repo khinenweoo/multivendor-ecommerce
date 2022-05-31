@@ -49,13 +49,13 @@
                        <h4 class="widget-title"><i class="fa fa-bars"></i><span>Categories</span></h4>
                        <div class="widget-content">
                             <ul class="sidebar_categories">
-                               @foreach ($category_products as $category)
+                               @foreach ($parent_categories as $pcategory)
                                     @php
-                                        $subcategories = App\Models\Category::where('parent_id', $category->id)->get();
-                                        $products_count = count($category->products);
+                                        $subcategories = App\Models\Category::where('parent_id', $pcategory->id)->get();
+                                        $products_count = count($pcategory->products);
                                     @endphp
                                 <li class="level1 {{count($subcategories) > 0 ? 'sub-level': ''}}">
-                                   <a href="{{route('category.products', ['category_slug'=>$category->slug])}}" class="cat-link">{{ $category->name }}</a>
+                                   <a href="{{route('category.product', ['category_slug'=>$pcategory->slug])}}" class="cat-link">{{ $pcategory->name }}</a>
                                     <span class="prod-count">({{$products_count}})</span>
                                 </li>
                                @endforeach
@@ -122,7 +122,7 @@
                                                 <a class="view-link list" href="#" data-target="list"><i class="fa fa-list"></i></a>
                                             </div>
                                             <div class="product-amount">
-                                                <p>Showing 1–16 of 21 results</p>
+                                                <p>Showing {{$products->count()}} results</p>
                                             </div>
                                         </div>
                                     </div>
@@ -197,7 +197,7 @@
                                            <span class="price">{{number_format($product->price) }} MMK</span>
                                        </div>
                                        <div class="product-seller">
-                                       <i class="fa fa-home"></i> Store: <span>Minimalist </span>
+                                       <i class="fa fa-home"></i> Store: <span>{{$product->seller->name}} </span>
                                        </div>                
                                        <div class="reviewStarsWrapper text-left">
                                            <div class="rating_stars">

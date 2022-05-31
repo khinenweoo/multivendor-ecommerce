@@ -40,7 +40,7 @@ class ShopFactory extends Factory
             'pickup_address' => $this->faker->text(50),
             'business_email'=> $this->faker->unique()->safeEmail(),
             'description' => $this->faker->sentences(2, true),
-            'is_active' => false,
+            'is_active' => true,
         ];
     }
 }

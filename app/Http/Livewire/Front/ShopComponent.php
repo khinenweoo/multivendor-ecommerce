@@ -55,11 +55,13 @@ class ShopComponent extends Component
             $products = Product::whereBetween('price', [$this->min_price,$this->max_price])->paginate($this->pagesize);
         }
 
-        $category_products = Category::with('products')->whereNull('parent_id')->get();
+        // $category_products = Category::with('products')->whereNull('parent_id')->get();
+        $parent_categories = Category::whereNull('parent_id')->get();
 
         $brands = Brand::with('products')->get();
+        // $product_brands = Product::with('brand')->get();
 
-        return view('livewire.front.shop-component', ['brands'=>$brands, 'category_products' => $category_products ,'products' => $products])->layout("layouts.base");
+        return view('livewire.front.shop-component', ['brands'=>$brands, 'parent_categories' => $parent_categories ,'products' => $products])->layout("layouts.base");
     
     }
 }
