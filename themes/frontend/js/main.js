@@ -496,6 +496,109 @@ import 'slick-carousel/slick/slick';
 		 });
 	   }
 	   compatible_prod_slider();
+	
+	/*-----------------------------------------
+	 Vendor Shop Slider  ---------------
+	-----------------------------------------*/
+	function vendor_slider(){
+		$('#vendor-slider').slick({
+		   dots: false,
+		   infinite: true,
+		   slidesToShow: 4,
+		   slidesToScroll: 1,
+		   nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+		   prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+		   autoplay: true,
+		   arrows: true,
+		   autoplaySpeed: 4000,
+		   responsive: [
+		   {
+			 breakpoint: 1024,
+			 settings: {
+			   slidesToShow: 2,
+			   slidesToScroll: 2
+			 }
+		   },
+		   {
+			breakpoint: 768,
+			settings: {
+			  slidesToShow: 2,
+			  slidesToScroll: 1
+			}
+		  },
+		   {
+			 breakpoint: 480,
+			 settings: {
+			   slidesToShow: 1,
+			   slidesToScroll: 1
+			 }
+		   },
+		   {
+			 breakpoint: 370,
+			 settings: {
+			   slidesToShow: 1,
+			   slidesToScroll: 1
+			 }
+		   },
+		   {
+			breakpoint: 320,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  }
+		   ]
+		 });
+	   }
+	   vendor_slider();
+	/*-----------------------------------------
+	 Brand Slider Slick ---------------
+	-----------------------------------------*/
+	function brand_slider(){
+		$('#brand-slider').slick({
+		   slidesToShow: 6,
+		   slidesToScroll: 1,
+		   arrows: true,
+		   nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+		   autoplay: true,
+		   swipe: true,
+		   dots: false,
+		   responsive: [
+		   {
+			 breakpoint: 1024,
+			 settings: {
+			   slidesToShow: 4,
+			   slidesToScroll: 1
+			 }
+		   },
+		   {
+			breakpoint: 768,
+			settings: {
+			  slidesToShow: 2,
+			  slidesToScroll: 1
+			}
+		  },
+		   {
+			 breakpoint: 480,
+			 settings: {
+			   slidesToShow: 2,
+			   slidesToScroll: 1
+			 }
+		   },
+		   {
+			breakpoint: 320,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+				}
+		  	}
+		   ]
+		 });
+	   }
+	   brand_slider();
+
+
 	/*-----------------------------------------
 	 Blog Slider Slick ---------------
 	-----------------------------------------*/
@@ -543,61 +646,6 @@ import 'slick-carousel/slick/slick';
 	   }
 	   blog_slider();
 
-	/*-----------------------------------------
-	 Vendor Shop Slider  ---------------
-	-----------------------------------------*/
-	function vendor_slider(){
-		$('#vendor-slider').slick({
-		   dots: false,
-		   infinite: true,
-		   slidesToShow: 2,
-		   slidesToScroll: 1,
-		   rows: 2,
-		   nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
-		   prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
-		   autoplay: true,
-		   arrows: true,
-		   autoplaySpeed: 4000,
-		   responsive: [
-		   {
-			 breakpoint: 1024,
-			 settings: {
-			   slidesToShow: 2,
-			   slidesToScroll: 2
-			 }
-		   },
-		   {
-			breakpoint: 768,
-			settings: {
-			  slidesToShow: 2,
-			  slidesToScroll: 1
-			}
-		  },
-		   {
-			 breakpoint: 480,
-			 settings: {
-			   slidesToShow: 2,
-			   slidesToScroll: 1
-			 }
-		   },
-		   {
-			 breakpoint: 370,
-			 settings: {
-			   slidesToShow: 2,
-			   slidesToScroll: 1
-			 }
-		   },
-		   {
-			breakpoint: 320,
-			settings: {
-			  slidesToShow: 1,
-			  slidesToScroll: 1
-			}
-		  }
-		   ]
-		 });
-	   }
-	   vendor_slider();
 
 	/*-------------------------------
 	 Scroll Top ------------------

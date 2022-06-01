@@ -265,7 +265,6 @@ margin-bottom: 50px;
     .cat-col{
       border-right: 1px solid #e5e5e5;
       padding: 0!important;
-      background-color: #fff;
     }
 
     .cat-col:last-child {
@@ -291,8 +290,9 @@ margin-bottom: 50px;
       }
 
       img {
-        margin: 0 0 30px 0;
-        max-width: 100px;
+        margin: 0 0 6px 0;
+        padding-right: 6px;
+        max-width: 100%;
         width: 100%;
         height: 100px;
       }
@@ -332,9 +332,8 @@ margin-bottom: 50px;
 /* ------- Recommended Shop Section ---------*/
 .vendor-section {
   margin: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #f7f7fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #eff0f2;
 
   .vendors_block {
@@ -546,11 +545,82 @@ margin-bottom: 50px;
       }
     
   }
-
-
 }
 
 /* ------- End Recommended Shop Section ---------*/
+.brands-section{
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eff0f2;
+
+  .brand_border {
+    padding: 0px 5px;
+    border-radius: 5px;
+    border: 1px solid #d8ae5fba;
+    box-shadow: 0px 0px 10px 0px #d8ae5fba;
+    background-color: #fff;
+  }
+
+  .brand-slider {
+    .brand_logo {
+      margin: 15px 0;
+      padding: 10px 0;
+      height: 100px;
+
+      a{
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .slick-slide {
+      margin: 0 15px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    //Slick Arrorws
+    .slick-arrow {
+      font-size: 0;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      justify-content: center;
+      background-color: #ba8b33b5;
+      border: 1px solid #d8ae5fba;
+      box-shadow: 0 0 10px 2px rgb(123 190 70 / 7%);
+      z-index: 4;
+    }
+    .slick-prev{
+      border: 1px solid #d8ae5fba;
+      &:before{
+        display: none;
+      }
+      i{
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+    .slick-next {
+      border: 1px solid #d8ae5fba;
+      &:before{
+        display: none;
+      }
+      i{
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+    .slick-initialized .slick-arrow:not(.slick-disabled){
+      opacity: 1;
+    }
+  }
+}
+
 // section title start
 .product-section {
   background-color: #eff0f2;

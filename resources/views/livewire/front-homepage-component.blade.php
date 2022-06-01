@@ -276,7 +276,7 @@
         <section class="vendor-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="col-xl-12 col-md-12 col-12">
                         <div class="vendors_block">
                             <div class="box-slider-top">
                                 <div class="block-title">
@@ -284,9 +284,7 @@
                                 </div>
                             </div>
                             <div class="box-slider-bottom">
-                                <div class="row">
-                                    <div class="">
-                                        @if($featured_stores->count() > 0 )
+                                @if($featured_stores->count() > 0 )
                                         <div class="vendor-slider" id="vendor-slider" wire:ignore>
                                             @foreach($featured_stores as $store)
                                             <div class="shop-wrap">
@@ -311,7 +309,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
-                                                        <a href="{{route('vendor-shop.home', ['shop_slug'=>$store->shop_slug])}}" class="view-shop">View <i class="fa fa-caret-right" aria-hidden="true"></i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                                        <a href="{{route('vendor-shop.home', ['shop_slug'=>$store->shop_slug])}}" class="view-shop">View </i class="fa fa-caret-right" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
 
@@ -320,20 +318,36 @@
                                             @endforeach
                                         </div>
                                         @endif
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                        <div class="adv_block">
-                                            <img src="{{ asset('frontend/images/home/ads-side.jpg') }}" alt="">
-                                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- End Shop Section -->
+
+        <section class="brands-section">
+            <div class="container">
+                <div class="brand_border">
+                    <div class="row">
+                        <div class="col-12">
+                        <div class="brand-slider" id="brand-slider"  wire:ignore>
+                            @foreach($brands as $brand)
+                            
+                                <div class="brand_logo">
+                                    <a href="">
+                                        <img src="{{ asset('storage/brands/'.$brand) }}" alt="brand" class="img-fluid w-100">
+                                    </a>
+                                </div>
+                          
+                            @endforeach
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Blog Section Start -->
         <section class="blog-section">

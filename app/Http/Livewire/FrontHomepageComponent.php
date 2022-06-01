@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
+use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Shop;
 use Carbon\Carbon;
@@ -37,16 +38,13 @@ class FrontHomepageComponent extends Component
                     ['featured_expiry_date', '>', $current_time]
                 ])->get();
 
-
                 //Get parent Categories
                 $categories = Category::whereNull('parent_id')->get();
 
-        
                 //Get Latest Products
                 // $new_products = Product::orderBy('created_at','DESC')->get()->take(20);
                 $new_products = Product::where(['conditions' => 'new', 'status' => 'active'])->limit(20)->get();
                
-        
                 //Trending Products
                 $trending_products = Product::where(['conditions' => 'popular', 'status'=> 'active'])->limit(20)->get();
         
@@ -56,6 +54,10 @@ class FrontHomepageComponent extends Component
                 //Default Products for top ranked section
                 $default_products = Product::where('status', 'active')->limit(20)->get();
 
+                // Top Brands
+                $top_brands = Brand::where('status', 'active')->get()->pluck('brand_image');
+
+
         return view('livewire.front-homepage-component', [
             'categories' => $categories,
             'featured_categories' => $featuredCategories,
@@ -63,7 +65,8 @@ class FrontHomepageComponent extends Component
             'new_products' => $new_products,
             'trending_products' => $trending_products,
             'recommend_products' => $recommend_products,
-            'default_products' => $default_products
+            'default_products' => $default_products,
+            'brands' => $top_brands,
         ])->layout("layouts.base");
     }
 
