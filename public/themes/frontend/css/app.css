@@ -2191,7 +2191,7 @@ span {
 /* ------- End Recommended Shop Section ---------*/
 .brands-section {
   margin: 0;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 50px;
   background-color: #eff0f2;
 }
@@ -6813,11 +6813,11 @@ body.show-sidebar-cart #sidebar-cart {
   }
 
   .main-header .column_wrap {
-    height: 560px;
+    height: 540px;
   }
 
   .home_header .hero_slider .hero-slide {
-    height: 560px;
+    height: 540px;
   }
   .home_header .hero_slider .hero-slide .slide-image {
     max-width: 400px;
@@ -6860,11 +6860,11 @@ body.show-sidebar-cart #sidebar-cart {
   }
 
   .main-header .column_wrap {
-    height: 600px;
+    height: 540px;
   }
 
   .home_header .hero_slider .hero-slide {
-    height: 600px;
+    height: 540px;
   }
   .home_header .hero_slider .hero-slide .slide-image {
     max-width: 400px;

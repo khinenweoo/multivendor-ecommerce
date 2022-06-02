@@ -109,9 +109,8 @@ import 'slick-carousel/slick/slick';
 		slidesToScroll: 1,
 		dots: true,
         infinite: true,
-        autoplay: true,
-		autoplaySpeed: 4000,
-        draggable: false,
+        autoplay: false,
+        draggable: true,
         fade: false,
         cssEase: 'linear',
 		responsive: [
