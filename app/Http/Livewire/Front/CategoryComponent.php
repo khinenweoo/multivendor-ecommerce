@@ -18,6 +18,7 @@ class CategoryComponent extends Component
     public $category_slug;
     public $min_price;
     public $max_price;
+    public $sub_category;
 
     /**
      * Add Product to Shopping Cart
@@ -51,7 +52,7 @@ class CategoryComponent extends Component
 
         if($category->parent_id !== null)
         {
-            $sub_category = $category->parent;
+            $this->sub_category = $category->parent;
             $parent_category = $category->parent;
         }else {
             $parent_category = null;
@@ -91,7 +92,7 @@ class CategoryComponent extends Component
         return view('livewire.front.category-component', [
             'category_products' => $category,
             'category_name' => $category_name,
-            'sub_category' => $sub_category,
+            'sub_category' => $this->sub_category,
             'parent_category' => $parent_category,
             'products' => $products, 
             'product_brands' => $product_brands,

@@ -14,11 +14,7 @@
                 </div>
                 <div class="topbar-right">
                   <ul class="social-list">
-                    <!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
-                    
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                    <!-- <li><a href="{{ route('contact') }}">Contact Us</a></li> -->
                   </ul>
                   <div class="menu-item lang pr-5">
                       <div class="language-picker">
@@ -67,8 +63,7 @@
                                     </li>
                                     <li class="menu-item">
                                         <a href="" class="link-title">
-                                            <span>Promotions</span>
-                                            
+                                            <span>Shop</span>
                                         </a>
                             
                                     </li>
@@ -82,11 +77,6 @@
                                           <li><a href="{{ route('farmermarket') }}" class="site-nav">Farmer Market</a></li>
                                         
                                         </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="" class="link-title">
-                                            <span>Social Enterprise</span>
-                                        </a>
                                     </li>
                                     <li class="menu-item">
                                         <a class="link-title" href="{{ route('vendor-shop.list') }}">
@@ -105,15 +95,23 @@
                                         </a>
                                         <ul class="dropdown">                    
                                           <li><a href="{{ route('seller.register') }}" class="site-nav">Local Seller</a></li>
-                                          <li><a href="#" class="site-nav">Global Seller</a></li>
+                                          <li><a href="{{ route('becomeseller') }}" class="site-nav">Global Seller</a></li>
                                         </ul>
                                     </li>
-              
+                                    <li class="menu-item">
+                                        <a href="#" class="link-title">
+                                            <span>FAQ</span>
+                                        </a>
+                                    </li>
                                     <li class="menu-item">
                                         <a class="link-title" href="{{ route('blogs') }}">
                                             <span>Blog</span>
                                         </a>
-                                      
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{ route('contact') }}" class="link-title">
+                                            <span>Contact Us</span>
+                                        </a>
                                     </li>
               
                                 </ul>
@@ -284,7 +282,7 @@
                   <li class="search">
                     <div class="header-search-bar">
                         <form action="#" class="form-search" name="desktop-seacrh" method="get">
-                            <input type="text" name="s" class="input-text form-control" value="" placeholder="I'm looking for...">
+                            <input type="text" name="s" class="input-text form-control" value="" placeholder="Search for items...">
                             <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                         </form>
                     </div>

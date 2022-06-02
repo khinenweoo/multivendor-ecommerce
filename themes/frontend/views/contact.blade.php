@@ -3,7 +3,7 @@
 @section('content')
 <div id="main-content" class="contactus-page main-content">
 <!-- Breadcrumbs -->
-<div class="breadcrumb-section">
+<!-- <div class="breadcrumb-section">
          <div class="container-fluid">
              <div class="row">
                  <div class="col-md-12 col-sm-12">
@@ -20,13 +20,13 @@
                  </div>
              </div>
          </div>
-</div>
+</div> -->
 <!-- End Breadcrumbs -->
 
 <!-- page content -->
 <div class="page-contain">
-    <section class="contactSection">
-        <div class="container-fluid">
+    <section class="contactSection mt-5">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title">Contact</div>
@@ -73,12 +73,13 @@
                                 Tell us about your interests and we will write you back answering how can we help to achieve your goals.
                                 <div class="open-hours my-3">
                                     <strong>Opening Hours</strong><br>
-                                    Mon - Sat : 9am - 11pm<br>
+                                    Mon - Sat : 9am - 4pm<br>
                                     Sunday: 11am - 5pm
                                 </div>
                                 <ul class="addressFooter">
-                                    <li><p><i class="icon-location-pin"></i>55 Gallaxy Enque, 2568 steet, 23568 NY</p></li>
-                                    <li class="phone"><p><i class="icon-phone"></i>(+95) 09 000 0000</p></li>
+                                    <li><p><i class="icon-location-pin"></i>Building 19, MICT Park, Hlaing Township, Yangon, Myanmar
+                                </p></li>
+                                    <li class="phone"><p><i class="icon-phone"></i>(+95) 09 940464212</p></li>
                                     <li class="email"><p><i class="icon-envelope-open"></i>sales@proudofmyanmar.com</p></li>
                                 </ul>
                             </div>

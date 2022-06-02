@@ -513,7 +513,7 @@ margin-bottom: 50px;
           justify-content: center;
           padding: 0;
           z-index: 2;
-          background: #f5f5f5;
+          background: #222;
           overflow: hidden;
           transition: all 0.3s;
       }
@@ -528,7 +528,7 @@ margin-bottom: 50px;
           i{
             font-size: 22px;
             font-weight: 500;
-            color: #000!important;
+            color: #fff!important;
           }
       }
       .slick-next {
@@ -540,7 +540,7 @@ margin-bottom: 50px;
           i{
             font-size: 22px;
             font-weight: 500;
-            color: #000!important;
+            color: #fff!important;
           }
       }
     
@@ -633,7 +633,8 @@ margin-bottom: 50px;
 .user-selection-section .sect-header,
 .vendor-section .sect-header,
 .justforyou-section .sect-header,
-.blog-section .sect-header {
+.blog-section .sect-header,
+.brands-section .sect-header {
     position: relative;
     padding: 20px 0;
     h2 {

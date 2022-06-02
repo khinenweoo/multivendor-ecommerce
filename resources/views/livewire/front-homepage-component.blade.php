@@ -75,7 +75,7 @@
                     <div class="col-4 col-lg-4 d-none d-lg-block d-xl-block">
                         <div class="column_wrap">
                             <div class="side_ads">
-                                <img alt="Banner Image" class="img-responsive" src="{{ asset('frontend/images/home/side-ad-banner.png') }}">
+                                <img alt="Banner Image" class="img-responsive" src="{{ asset('frontend/images/home/side-ad-banner.png') }}" style="border-radius:15px;">
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                             <a class="nav-link active show" href="#new_arrivals" data-toggle="tab" aria-expanded="false">New Arrivals</a>
                             </li>
                             <!-- <li class="nav-item"><a class="nav-link" href="#best_seller" data-toggle="tab">Best Seller</a></li> -->
-                            <li class="nav-item"><a class="nav-link" href="#most_popular" data-toggle="tab">Most Popular</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#most_popular" data-toggle="tab">Trending</a></li>
                             <li class="nav-item"><a class="nav-link" href="#recommended" data-toggle="tab">Recommended</a></li>
                         </ul>
                         <div class="tab-content">
@@ -140,33 +140,24 @@
                                                             <a href="{{route('product.detail', $nproduct->product_slug)}}" class="prod-img">
                                                                 <img src="{{ asset('storage/products/'.$nproduct->product_image) }}" alt="">
                                                             </a>
-                                                            <div class="prod-action">
-                                                                <a href="" class="wishlist"><i class="fa fa-heart"></i></a>
-                                                                <!-- <a href="{{route('product.detail', $nproduct->product_slug)}}" class="add-to-cart"><i class="fa fa-shopping-bag"></i></a> -->
-                                                                <a href="" class="quick-view"><i class="fa fa-eye"></i></a>
-                                                            </div>
+                                                        
                                                         </div>
                                                         <div class="product-content">
-                                                            <h3 class="product-name">
+                                                            <h3 class="product-title">
                                                                 <a href="{{route('product.detail', $nproduct->product_slug)}}">{{ $nproduct->product_name }}</a>
                                                             </h3>
-                                                            <div class="product-price">
-                                                                <span class="price">MMK {{ $nproduct->price }}</span>
-                                                            </div>
-                                                    
-                                                         
-                                                            @if($nproduct->added_by == 'seller')
-                                                            <div class="product-seller pb-3">
-                                                                <i class="fa fa-home"></i>Store: <span>{{$nproduct->seller->name}}</span>
-                                                            </div>
-                                                            @else
-                                                            <div class="product-seller">
-                                                            <i class="fa fa-home"></i>Store: <span>Admin</span>
-                                                            </div>
-                                                            @endif
-                                                            <div class="addtocart-button rounded transition-colors">
-                                                                <a href="#"  wire:click.prevent="addtocart({{$nproduct->product_id}},'{{$nproduct->product_name}}',{{$nproduct->price}})" class="add-to-cart action-btn d-flex text-xs md:text-sm text-dark" style="justify-content:center;align-items:center;" aria-label="Add To Cart"><i class="fa fa-shopping-bag px-2"></i> Add</a>
-                                                            </div>
+                                                            
+                                                            <div class="group-price">
+                                                                <span class="price">
+                                                                    <span class="prod-price">{{ $nproduct->price }} Ks</span>
+                                                                </span>
+                                                                <span class="add-to-cart">
+                                                                    <a href="#" wire:click.prevent="addtocart({{$nproduct->product_id}},'{{$nproduct->product_name}}',{{$nproduct->price}})" class="btn" aria-label="Add To Cart">
+                                                                    <i class="icon-basket"></i>
+                                                                    <!-- <i class="icon-plus" style="font-size:16pt;"></i> -->
+                                                                    </a>
+                                                                </span>
+                                                            </div>  
                                                         </div>
                                             </div>
                                         </div>
@@ -191,13 +182,11 @@
                                                             </a>
                                                         </div>
                                                         <div class="product-content">
-                                                            <h3 class="product-name">
+                                                            <h3 class="product-title">
                                                                 <a href="{{route('product.detail', $tproduct->product_slug)}}">{{ $tproduct->product_name }}</a>
                                                             </h3>
-                                                            <div class="product-price">
-                                                                <span class="price">MMK {{ $tproduct->price }}</span>
-                                                            </div>
-                                                            @php
+                                                            
+                                                            <!-- @php
                                                                 $prod_shop = App\Models\Shop::where('seller_id', $tproduct->seller_id)->first();
                                                             @endphp
                                                             @if($tproduct->added_by == 'seller')
@@ -208,9 +197,17 @@
                                                             <div class="product-seller">
                                                             <i class="fa fa-home"></i>Store: <span>Admin</span>
                                                             </div>
-                                                            @endif
-                                                            <div class="addtocart-button rounded transition-colors">
-                                                                <a href="#"  wire:click.prevent="addtocart({{$tproduct->product_id}},'{{$tproduct->product_name}}',{{$tproduct->price}})" class="add-to-cart action-btn d-flex text-xs md:text-sm text-dark" style="justify-content:center;align-items:center;" aria-label="Add To Cart"><i class="fa fa-shopping-bag px-2"></i> Add</a>
+                                                            @endif -->
+                                                            <div class="group-price">
+                                                                <span class="price">
+                                                                    <span class="prod-price">{{ $nproduct->price }} Ks</span>
+                                                                </span>
+                                                                <span class="add-to-cart">
+                                                                    <a href="#" wire:click.prevent="addtocart({{$nproduct->product_id}},'{{$nproduct->product_name}}',{{$nproduct->price}})" class="btn" aria-label="Add To Cart">
+                                                                    <i class="icon-basket"></i>
+                                                                    <!-- <i class="icon-plus" style="font-size:16pt;"></i> -->
+                                                                    </a>
+                                                                </span>
                                                             </div>
                                                         </div>
                                             </div>
@@ -328,6 +325,13 @@
 
         <section class="brands-section">
             <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    <div class="sect-header my-3">
+                            <h2> Popular Brands</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="brand_border">
                     <div class="row">
                         <div class="col-12">

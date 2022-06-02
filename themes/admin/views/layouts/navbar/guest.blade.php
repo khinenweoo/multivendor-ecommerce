@@ -17,11 +17,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
-                <!-- <li class="nav-item">
-                    <a href="{{ route('admin.home') }}" class="nav-link text-primary">
-                        <i class="tim-icons icon-minimal-left"></i> {{ _('Back to Dashboard') }}
-                    </a>
-                </li> -->
                 <li class="nav-item ">
                     <a href="{{ route('admin.register') }}" class="nav-link">
                         <i class="tim-icons icon-laptop"></i> {{ _('Register') }}

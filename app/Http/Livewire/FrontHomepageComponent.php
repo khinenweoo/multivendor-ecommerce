@@ -26,7 +26,7 @@ class FrontHomepageComponent extends Component
     {
                 //Get Featured Categories
                 // $featuredCategories = Category::where('is_featured',1)->limit(12)->orderBy('id','DESC')->get();
-                $featuredCategories = Category::where('is_featured',1)->limit(12)->orderBy('id','DESC')->get();
+                $featuredCategories = Category::where('is_featured',1)->limit(12)->orderBy('id','ASC')->get();
 
                 //Get Hot Deal Stores
                 $active_stores = Shop::where('is_active', 1)->inRandomOrder()->get()->take(10);
@@ -36,20 +36,22 @@ class FrontHomepageComponent extends Component
                 $featured_stores = Shop::where([
                     ['is_active', '=', 1],
                     ['featured_expiry_date', '>', $current_time]
-                ])->get();
+                ]) ->orderBy('created_at', 'asc')->get();
 
                 //Get parent Categories
                 $categories = Category::whereNull('parent_id')->get();
 
                 //Get Latest Products
                 // $new_products = Product::orderBy('created_at','DESC')->get()->take(20);
-                $new_products = Product::where(['conditions' => 'new', 'status' => 'active'])->limit(20)->get();
+                $new_products = Product::where(['conditions' => 'new', 'status' => 'active'])
+                                ->limit(18)
+                                ->get();
                
                 //Trending Products
-                $trending_products = Product::where(['conditions' => 'popular', 'status'=> 'active'])->limit(20)->get();
+                $trending_products = Product::where(['conditions' => 'popular', 'status'=> 'active'])->limit(18)->get();
         
                 //Recommended Products
-                $recommend_products = Product::where(['conditions' => 'recommend', 'status'=> 'active'])->limit(20)->get();
+                $recommend_products = Product::where(['conditions' => 'recommend', 'status'=> 'active'])->limit(18)->get();
         
                 //Default Products for top ranked section
                 $default_products = Product::where('status', 'active')->limit(20)->get();

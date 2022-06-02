@@ -1,6 +1,6 @@
 
                 <a href="{{route('product.cart')}}" class="cart-link">
-                    <i class="icon-handbag"></i>
+                    <i class="icon-basket" style="font-size:24px;"></i>
                     @if(Cart::count() > 0)
                     <span class="cart-counter">{{Cart::count()}}</span>
                     @else

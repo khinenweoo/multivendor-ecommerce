@@ -6,6 +6,11 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Proud of Myanmar') }}</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="76x76" href="{{asset('frontend/images/favicon/apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('frontend/images/favicon/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/images/favicon/favicon-16x16.png')}}">
+        <link rel="manifest" href="{{asset('frontend/images/favicon/site.webmanifest')}}">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -16,11 +21,6 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js', 'themes/admin') }}" defer></script>
 
-
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('admin') }}/img/apple-icon.png">
-        <link rel="icon" type="image/png" href="{{ asset('admin') }}/img/favicon.png">
-        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
 

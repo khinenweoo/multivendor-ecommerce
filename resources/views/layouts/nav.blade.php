@@ -328,7 +328,7 @@
                   <li class="search">
                     <div class="header-search-bar">
                         <form action="#" class="form-search" name="desktop-seacrh" method="get">
-                            <input type="text" name="s" class="input-text" value="" placeholder="Search products...">
+                            <input type="text" name="s" class="input-text" value="" placeholder="Search for items...">
                             <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                         </form>
                     </div>

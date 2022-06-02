@@ -101,7 +101,7 @@
                                 @forelse ($prod_categories as $product)
                                 <ul>
                                     <li>                    
-                                       <a href="{{route('category.products', ['category_slug'=>$product->category->slug])}}">{{$product->category->name}}</a>                                  
+                                       <a href="{{route('category.product', ['category_slug'=>$product->category->slug])}}">{{$product->category->name}}</a>                                  
                                     </li> 
                                 </ul>
                                 @empty
